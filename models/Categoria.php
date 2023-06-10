@@ -13,7 +13,7 @@
 
         public function editar($idcategoria, $nombre, $descripcion){
             $sql="UPDATE categoria SET nombre='$nombre', descripcion='$descripcion' WHERE idcategoria='$idcategoria'";
-            return ejecutarConsultaUnica($sql);
+            return ejecutarConsulta($sql);
         }
 
         public function desactivar($idcategoria){

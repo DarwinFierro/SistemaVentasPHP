@@ -40,10 +40,13 @@ switch ($_GET["op"]) {
         $data=array();
         while ($resp=$respuesta->fetch_object()) {
             $data[]=array(
-                "0"=>$resp->idcategoria,
+                "0"=>($resp->condicion)?'<button class="btn btn-warning m-1" onclick="mostrar('.$resp->idcategoria.')"><i class="fas fa-info-circle"></i></button>'.
+                '<button class="btn btn-danger m-1" onclick="desactivar('.$resp->idcategoria.')"><i class="fas fa-times"></i></button>':
+                '<button class="btn btn-warning m-1" onclick="mostrar('.$resp->idcategoria.')"><i class="fas fa-info-circle"></i></button>'.
+                '<button class="btn btn-success m-1" onclick="activar('.$resp->idcategoria.')"><i class="fas fa-check"></i></button>',
                 "1"=>$resp->nombre,
                 "2"=>$resp->descripcion,
-                "3"=>$resp->condicion
+                "3"=>($resp->condicion)?'<span class="label bg-green">Activado</span>':'<span class="label bg-red">Desactivado</span>'
             );
         }
         $result=array(
