@@ -4,6 +4,7 @@ function init() {
     mostrarelformulario(false);
     listar();
     llenarSelectCategoria();
+    $("#imagenmuestra").hide();
 
     $("#formulario").on("submit",function(e){
         guardaryeditar(e);
@@ -14,6 +15,10 @@ function limpiar() {
   $("#nombre").val("");
   $("#descripcion").val("");
   $("#idcategoria").val("");
+  $("#imagenmuestra").attr("src","");
+  $("#imagenactual").val("");
+  $("#print").hide();
+  $("#idarticulo").val("");
 }
 
 function mostrarelformulario(x) {
