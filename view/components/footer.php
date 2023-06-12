@@ -36,8 +36,7 @@
   <script src="<?php echo $ruta ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?php echo $ruta ?>dist/js/adminlte.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="<?php echo $ruta ?>dist/js/demo.js"></script>
+
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="<?php echo $ruta ?>dist/js/pages/dashboard.js"></script>
 
@@ -56,3 +55,5 @@
 <script src="<?php echo $ruta ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>

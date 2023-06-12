@@ -40,7 +40,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 tablero
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -54,13 +53,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="articulo.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Articulos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="categoria.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Categorias</p>
                 </a>
