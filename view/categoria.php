@@ -1,3 +1,13 @@
+<?php 
+ob_start();
+session_start();
+if(!isset($_SESSION['nombre'])){
+    header("Location: login.php");
+}else{
+  require_once("components/header.php");
+  if($_SESSION['almacen'] == 1){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,15 +98,22 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </section><!-- /.content -->
-
     </div>
     <!-- /.content-wrapper -->
 
     <?php require_once("components/footer.php") ?>
   </div>
   <!-- ./wrapper -->
-
-  <script src="js/categoria.js"></script>
 </body>
 
 </html>
+
+<?php 
+  }else {
+    require 'noacceso.php';
+  }
+  require_once("components/footer.php");
+  echo '<script src="js/categoria.js"></script>';
+}
+ob_end_flush();
+?>

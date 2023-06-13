@@ -100,7 +100,6 @@ function mostrar(idusuario) {
       $("#email").val(data.email);
       $("#cargo").val(data.cargo);
       $("#login").val(data.login);
-      $("#clave").val(data.clave);
       $("#imagenmuestra").show();
       $("#imagenmuestra").attr("src", "../files/usuarios/"+data.imagen);
       $("#imagenactual").val(data.imagen);

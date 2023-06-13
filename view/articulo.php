@@ -1,8 +1,14 @@
+<?php 
+ob_start();
+session_start();
+if(!isset($_SESSION['nombre'])){
+    header("Location: login.php");
+}else{
+  require_once("components/header.php");
+  if($_SESSION['almacen'] == 1){
+?>
 <!DOCTYPE html>
 <html lang="en">
-
-<?php require_once("components/header.php") ?>
-
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
 
@@ -143,12 +149,17 @@
 
     </div>
     <!-- /.content-wrapper -->
-
-    <?php require_once("components/footer.php") ?>
   </div>
   <!-- ./wrapper -->
-
-  <script src="js/articulo.js"></script>
 </body>
 
 </html>
+<?php 
+  }else {
+    require 'noacceso.php';
+  }
+  require_once("components/footer.php");
+  echo '<script src="js/articulo.js"></script>';
+}
+ob_end_flush();
+?>

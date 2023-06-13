@@ -1,3 +1,12 @@
+<?php 
+ob_start();
+session_start();
+if(!isset($_SESSION['nombre'])){
+    header("Location: login.php");
+}else{
+  require_once("components/header.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,7 +162,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Permisos</label>
-                        <ul style="list-style: none;" id="permisos">
+                        <ul style="list-style: none;" class="row" id="permisos">
                         
                         </ul>
                       </div>
@@ -188,12 +197,15 @@
 
     </div>
     <!-- /.content-wrapper -->
-
     <?php require_once("components/footer.php") ?>
   </div>
   <!-- ./wrapper -->
-
-  <script src="js/usuario.js"></script>
 </body>
 
 </html>
+<?php 
+  
+  echo '<script src="js/usuario.js"></script>';
+}
+ob_end_flush();
+?>
